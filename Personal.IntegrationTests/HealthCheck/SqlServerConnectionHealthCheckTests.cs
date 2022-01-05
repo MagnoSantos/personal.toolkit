@@ -6,7 +6,7 @@ using Personal.IntegrationTests.Configuration;
 using System.Threading.Tasks;
 using Xunit;
 
-namespace Personal.IntegrationTests
+namespace Personal.IntegrationTests.HealthCkeck
 {
     public class SqlServerConnectionHealthCheckTests : BaseIntegrationTests<SqlServerConnectionHealthCheck>
     {

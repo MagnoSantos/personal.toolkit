@@ -22,6 +22,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Personal.Extensions\Personal.Extensions.csproj" />
+    <ProjectReference Include="..\Personal.Infra\Personal.Infra.csproj" />
   </ItemGroup>
 
 </Project>

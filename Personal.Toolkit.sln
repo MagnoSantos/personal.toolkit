@@ -5,15 +5,19 @@ VisualStudioVersion = 16.0.31624.102
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0 - Toolkits", "0 - Toolkits", "{B462D316-059F-4765-91D1-D55CA4C88120}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Personal.Extensions", "Personal.Extensions\Personal.Extensions.csproj", "{E7CF9A07-DF16-4C62-AA93-FAE2744DB66D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Personal.Extensions", "Personal.Extensions\Personal.Extensions.csproj", "{E7CF9A07-DF16-4C62-AA93-FAE2744DB66D}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1 - Tests", "1 - Tests", "{1A90ED46-E105-45AB-B001-8DB20C8B3568}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Personal.UnitTests", "Personal.UnitTests\Personal.UnitTests.csproj", "{46706F60-7CE2-4411-B732-EF0BBD9F98B4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Personal.UnitTests", "Personal.UnitTests\Personal.UnitTests.csproj", "{46706F60-7CE2-4411-B732-EF0BBD9F98B4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Personal.Infra", "Personal.Infra\Personal.Infra.csproj", "{58E1DE63-4005-4570-88D2-0F8341FEA08A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Personal.Infra", "Personal.Infra\Personal.Infra.csproj", "{58E1DE63-4005-4570-88D2-0F8341FEA08A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Personal.IntegrationTests", "Personal.IntegrationTests\Personal.IntegrationTests.csproj", "{21D6A3A0-9694-42C7-9C9F-56A1471850C3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Personal.IntegrationTests", "Personal.IntegrationTests\Personal.IntegrationTests.csproj", "{21D6A3A0-9694-42C7-9C9F-56A1471850C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Personal.Patterns", "Personal.Patterns\Personal.Patterns.csproj", "{C2837AC4-E226-47B1-986F-C92850F7EA27}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Personal.Commom", "Personal.Commom\Personal.Commom.csproj", "{B7DA9178-7B4D-4FAF-8A87-0638FF72644B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,6 +41,14 @@ Global
 		{21D6A3A0-9694-42C7-9C9F-56A1471850C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{21D6A3A0-9694-42C7-9C9F-56A1471850C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{21D6A3A0-9694-42C7-9C9F-56A1471850C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2837AC4-E226-47B1-986F-C92850F7EA27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2837AC4-E226-47B1-986F-C92850F7EA27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2837AC4-E226-47B1-986F-C92850F7EA27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2837AC4-E226-47B1-986F-C92850F7EA27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7DA9178-7B4D-4FAF-8A87-0638FF72644B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7DA9178-7B4D-4FAF-8A87-0638FF72644B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7DA9178-7B4D-4FAF-8A87-0638FF72644B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7DA9178-7B4D-4FAF-8A87-0638FF72644B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -46,6 +58,8 @@ Global
 		{46706F60-7CE2-4411-B732-EF0BBD9F98B4} = {1A90ED46-E105-45AB-B001-8DB20C8B3568}
 		{58E1DE63-4005-4570-88D2-0F8341FEA08A} = {B462D316-059F-4765-91D1-D55CA4C88120}
 		{21D6A3A0-9694-42C7-9C9F-56A1471850C3} = {1A90ED46-E105-45AB-B001-8DB20C8B3568}
+		{C2837AC4-E226-47B1-986F-C92850F7EA27} = {B462D316-059F-4765-91D1-D55CA4C88120}
+		{B7DA9178-7B4D-4FAF-8A87-0638FF72644B} = {B462D316-059F-4765-91D1-D55CA4C88120}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2CEA9ABB-2D4C-4F9A-95D1-EEEFEC30174F}

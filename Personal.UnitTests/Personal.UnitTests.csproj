@@ -24,6 +24,7 @@
     <ProjectReference Include="..\Personal.Commom\Personal.Commom.csproj" />
     <ProjectReference Include="..\Personal.Extensions\Personal.Extensions.csproj" />
     <ProjectReference Include="..\Personal.Infra\Personal.Infra.csproj" />
+    <ProjectReference Include="..\Personal.Patterns\Personal.Patterns.csproj" />
   </ItemGroup>
 
 </Project>

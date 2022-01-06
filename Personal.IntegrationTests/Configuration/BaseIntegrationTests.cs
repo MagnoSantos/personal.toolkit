@@ -2,6 +2,7 @@
 using System.IO;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 using Personal.IntegrationTests.Configuration.IoC;
 
 namespace Personal.IntegrationTests.Configuration
@@ -14,6 +15,7 @@ namespace Personal.IntegrationTests.Configuration
         protected BaseIntegrationTests()
         {
             ServiceProvider = CompositionRoot.BuildServiceProvider();
+            Dependency = ServiceProvider.GetRequiredService<TDependency>();
         }
 
         protected T GetDependency<T>() => ServiceProvider.GetRequiredService<T>();
@@ -33,6 +35,7 @@ namespace Personal.IntegrationTests.Configuration
             var services = new ServiceCollection();
 
             return services
+                    .AddLogging(configure => configure.AddConsole())
                     .AddSingleton<IConfiguration>(_ => configuration)
                     .ConfigureContainer(configuration)
                     .BuildServiceProvider();

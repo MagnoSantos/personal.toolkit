@@ -7,12 +7,10 @@ namespace Personal.Infra.Clients
 {
     public abstract class BaseAcl
     {
-        protected readonly string BaseUrl;
         protected readonly ILogger<object> Logger;
 
-        public BaseAcl(string baseUrl, ILogger<object> logger)
+        public BaseAcl(ILogger<object> logger)
         {
-            BaseUrl = baseUrl;
             Logger = logger;
         }
 

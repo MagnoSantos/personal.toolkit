@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace Personal.Commom
 {
@@ -12,5 +13,8 @@ namespace Personal.Commom
 
         public DateTime? CreateAt { get; set; }
         public string CreateBy { get; set; }
+
+        [Key]
+        public Guid Id { get; } = Guid.NewGuid();
     }
 }

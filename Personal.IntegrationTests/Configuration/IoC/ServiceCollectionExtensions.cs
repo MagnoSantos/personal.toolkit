@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Personal.Infra.Clients;
 using Personal.Infra.HealthCheck;
@@ -7,6 +8,10 @@ using Personal.Patterns.Builder;
 using Personal.Patterns.Resilience.Policies;
 using Personal.Patterns.Resilience.Service;
 using Personal.Patterns.Strategy;
+using Personal.Projects.Worker._1___Domain.Abstractions.Repositories;
+using Personal.Projects.Worker._2___Infra.Data.EntityFramework;
+using Personal.Projects.Worker._2___Infra.Data.Repositories;
+using System;
 
 namespace Personal.IntegrationTests.Configuration.IoC
 {
@@ -32,6 +37,14 @@ namespace Personal.IntegrationTests.Configuration.IoC
 
             //Clients
             services.AddScoped<IAclClient, AclClient>();
+
+            //Repositories
+            services.AddDbContext<DataContext>(options =>
+            {
+                options.UseInMemoryDatabase(Guid.NewGuid().ToString())
+                       .EnableSensitiveDataLogging();
+            })
+                .AddScoped<ICustomerRepository, CustomerRepository>();
 
             return services;
         }

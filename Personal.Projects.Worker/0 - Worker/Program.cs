@@ -25,7 +25,7 @@ namespace Personal.Projects.Worker._0___Worker
                 })
                 .ConfigureServices((hostContext, services) =>
                 {
-                    services.ConfigureContainer();
+                    services.ConfigureContainer(hostContext.Configuration);
                     services.AddHostedService<Worker>();
                 });
 

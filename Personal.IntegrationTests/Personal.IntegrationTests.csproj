@@ -19,6 +19,7 @@
   <ItemGroup>
     <PackageReference Include="FluentAssertions" Version="6.3.0" />
     <PackageReference Include="Microsoft.AspNetCore.Diagnostics.HealthChecks" Version="2.2.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="5.0.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration" Version="5.0.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="5.0.0" />
     <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="5.0.0" />
@@ -41,6 +42,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Personal.Infra\Personal.Infra.csproj" />
     <ProjectReference Include="..\Personal.Patterns\Personal.Patterns.csproj" />
+    <ProjectReference Include="..\Personal.Projects.Worker\Personal.Projects.Worker.csproj" />
   </ItemGroup>
 
 </Project>

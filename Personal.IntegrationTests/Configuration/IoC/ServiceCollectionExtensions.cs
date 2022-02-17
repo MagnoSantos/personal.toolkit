@@ -5,6 +5,7 @@ using Personal.Infra.Clients;
 using Personal.Infra.HealthCheck;
 using Personal.Infra.HealthCheck.Database.Sql;
 using Personal.Patterns.Builder;
+using Personal.Patterns.Decorator;
 using Personal.Patterns.Resilience.Policies;
 using Personal.Patterns.Resilience.Service;
 using Personal.Patterns.Strategy;
@@ -19,6 +20,9 @@ namespace Personal.IntegrationTests.Configuration.IoC
     {
         public static IServiceCollection ConfigureContainer(this IServiceCollection services, IConfiguration configuration)
         {
+            //Memory cache
+            services.AddMemoryCache();
+
             //Add dependency injection services
             services.AddHealthChecks()
                     .AddCheck<SqlServerConnectionHealthCheck>("sql_server_health_check")
@@ -45,6 +49,10 @@ namespace Personal.IntegrationTests.Configuration.IoC
                        .EnableSensitiveDataLogging();
             })
                 .AddScoped<ICustomerRepository, CustomerRepository>();
+
+            //Decorator
+            services.AddScoped<IAnyService, AnyService>()
+                    .Decorate<IAnyService, CachingDecorator>();
 
             return services;
         }

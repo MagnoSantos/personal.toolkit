@@ -1,7 +1,7 @@
 ﻿namespace Personal.Legacy;
 public class Container
 {
-    private static Container _instance;
+    private static Container? _instance;
     public static Container Instance
     {
         get
